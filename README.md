@@ -41,6 +41,20 @@ Buckle in.
 - Max 32 components
 - Less memory efficent than dynamic.
 
+### Who is this for?
+
+- People who don't need features or scale, who arn't space constrained, who are targeting low-performance computing devices.
+
+This just so happens to describe most raylib developers!
+
+- People who wern't going to use most ECS features or scale anyway, why not reap the benifit?
+
+Does your 2d platformer really need ENTT?
+
+- Anyone who has avoided the ECS design pattern because of unnessasary complexity and headache.
+
+This ECS is a joy to use, and it makes things easier, not harder.
+
 ## Basic Example
 
 ```c
@@ -73,20 +87,6 @@ int main(void) {
     return 0;
 }
 ```
-
-### Who is this for?
-
-- People who don't need features or scale, who arn't space constrained, who are targeting low-performance computing devices.
-
-This just so happens to describe most raylib developers!
-
-- People who wern't going to use most ECS features or scale anyway, why not reap the benifit?
-
-Does your 2d platformer really need ENTT?
-
-- Anyone who has avoided the ECS design pattern because of unnessasary complexity and headache.
-
-This ECS is a joy to use, and it makes things easier, not harder.
 
 ### Want more?
 
