@@ -51,10 +51,6 @@ Average time taken to iterate over 64 entities and iterate 2 components through 
 Average time taken to destroy 64 entities: 296.90 nanoseconds
 ```
 
-I would like to draw your attention to the fact that it takes the same amount of time to update 128 components, as it takes to update 32768, this is because we are running into the hardware limits. We are being constrained by memory access, not CPU.
-
-You can only achive this result by utilizing single-value components, with 1-op callbacks.
-
 # Static analysis
 
 The code is trivial, determinsitic, and introduced a total `~15op` overhead worst-case `-O0` in example.c.
