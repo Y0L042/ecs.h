@@ -11,7 +11,7 @@ No C++, no queries, no tags, no graphs, no relationships. Just determinstic stat
 - **No external dependencies**
 - **No overhead**: indisgingushable[*](https://github.com/173duprot/ecs.h/blob/main/PERFORMANCE.md#static-analysis) from direct iteration.
 - **Low Complexity**: only 129 lines of C11
-- **Easy to use**: only 9 functions
+- **Easy to use**: only 7 core, and 2 helper functions
 - **Serialization**: save/load the entire game state in miliseconds
 
 ## Performance
