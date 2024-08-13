@@ -37,7 +37,7 @@ Average time taken to destroy 1024 entities: 452.50 nanoseconds
 - Callback: 275.40 nanoseconds
 - Direct: 264.60 nanoseconds
 
-In this run it created a *~11ns* overhead in the best possible case.
+In this run it created a *~11ns* overhead in the worst possible case.
 
 ----
 
