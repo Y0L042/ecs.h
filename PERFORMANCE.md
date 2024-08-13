@@ -5,15 +5,15 @@
 ## Current performance
 
 ```
-Average time taken to create 1024 entities: 3790.30 nanoseconds
-Average time taken to add 32 components to each of 1024 entities: 244519.03 nanoseconds
-Average time taken to save ecs_t state: 257.63 nanoseconds
-Average time taken to load ecs_t state: 352.37 nanoseconds
-Average time taken to iterate over 1024 entities and iterate 32 components through callback: 250.04 nanoseconds
-Average time taken to destroy 1024 entities: 2742.04 nanoseconds
+Average time taken to create 1024 entities: 894.56 nanoseconds
+Average time taken to add 32 components to each of 1024 entities: 16816.18 nanoseconds
+Average time taken to save ecs_t state: 249.47 nanoseconds
+Average time taken to load ecs_t state: 248.63 nanoseconds
+Average time taken to iterate over 1024 entities and iterate 32 components through callback: 246.99 nanoseconds
+Average time taken to destroy 1024 entities: 250.03 nanoseconds
 ```
 
-Please note that entity destruction is far slower than it used to be. Entity destruction can be made trivial (~200ns) by the active list, however this introduces (~30ns) overhead in the iteration process.
+This current impliment
 
 ## Direct access comparison
 
