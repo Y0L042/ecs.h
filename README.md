@@ -4,7 +4,7 @@
 
 *"Built for your old thinkpad."*
 
-No C++, no queries, no tags, no graphs, no relationships. Just determinstic static array access. It almost matches the speed of direct array access, meaning there is essentially 0 overhead.
+No C++, no queries, no tags, no graphs, no relationships. Just determinstic static array access. Almost indistinguishable from direct array access, meaning there is essentially 0 overhead.
 
 ## Features
 
