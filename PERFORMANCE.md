@@ -39,7 +39,7 @@ Average time taken to destroy 1024 entities: 452.50 nanoseconds
 
 In this run it created a *~11ns* overhead in the worst possible case.
 
-----
+## Comparison with other ECS systems.
 
 For comparison with [this chart](https://github.com/abeimler/ecs_benchmark?tab=readme-ov-file#create-entities) I ran the performance test. It is over ~6x times faster than pico_ecs, and over ~12x faster than ENTT.
 
