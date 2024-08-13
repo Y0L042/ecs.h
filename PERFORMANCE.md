@@ -12,8 +12,9 @@ Average time taken to load ecs_t state: 248.63 nanoseconds
 Average time taken to iterate over 1024 entities and iterate 32 components through callback: 246.99 nanoseconds
 Average time taken to destroy 1024 entities: 250.03 nanoseconds
 ```
+Because of the scale of this engine, as long as you use 1-val components, and atomic `~1-3op` system design, you will get trivial system operation.
 
-This current impliment
+If you can do it determinsiticly with few ops, do it, your cpu will thank you.
 
 ## Direct access comparison
 
@@ -53,22 +54,6 @@ Average time taken to destroy 64 entities: 296.90 nanoseconds
 I would like to draw your attention to the fact that it takes the same amount of time to update 128 components, as it takes to update 32768, this is because we are running into the hardware limits. We are being constrained by memory access, not CPU.
 
 You can only achive this result by utilizing single-value components, with 1-op callbacks.
-
-# Is the update loop inefficent?
-
-In theory, yes.
-
-```
- % ./max_128 
-Average time taken to iterate over 128 entities and iterate 32 components through callback: 255.33 nanoseconds
-
-% ./max_2096                 
-Average time taken to iterate over 2096 entities and iterate 32 components through callback: 270.87 nanoseconds
-```
-
-In practice, cache optimization is counter-intuitive.
-
-**Practically, this means ecs_update is O(1).**
 
 # Static analysis
 
