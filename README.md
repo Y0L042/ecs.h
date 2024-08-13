@@ -1,4 +1,4 @@
-<img align="left" style="width:260px" src="https://github.com/raysan5/raylib/blob/master/logo/raylib_logo_animation.gif" width="288px">
+<img align="left" style="width:260px" src="https://github.com/173duprot/ecs.h/blob/master/misc/ecs.h.gif" width="288px">
 
 **ecs.h** is a simple, fun, static, ECS library with no overhead.**
 
