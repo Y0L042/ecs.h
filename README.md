@@ -1,4 +1,4 @@
-<img align="left" style="width:260px" src="https://github.com/173duprot/ecs.h/blob/master/misc/ecs.h.gif" width="288px">
+<img align="left" style="width:260px" src="./misc/ecs.h.gif" width="288px">
 
 **ecs.h** is a simple, fun, static, ECS library with no overhead.**
 
@@ -31,6 +31,15 @@ This is a student research project, I have spent over a month whittling the code
 According to performance tests? yes[*](https://github.com/173duprot/ecs.h/blob/main/PERFORMANCE.md)
 
 Accoding to static analyses? yes[*](https://github.com/173duprot/ecs.h/blob/main/PERFORMANCE.md#static-analysis)
+
+
+### Downsides
+
+Buckle in.
+
+- Max 2048 entities
+- Max 32 components
+- Less memory efficent than dynamic.
 
 ## Basic Example
 
@@ -65,20 +74,6 @@ int main(void) {
 }
 ```
 
-### Where's the systems?
-
-By base, functions are the systems.
-
-If your looking for more functionality, then you should pair this with our ***lock-free multithreading, realtime, event system [\[evs.h\]](https://github.com/173duprot/evs.h)*** which is powered by the same algorithems that run the frostbite engine, and .
-
-### Downsides
-
-Buckle in.
-
-- Max 2048 entities
-- Max 32 components
-- Less memory efficent than dynamic.
-
 ### Who is this for?
 
 - People who don't need features or scale, who arn't space constrained, who are targeting low-performance computing devices.
@@ -93,6 +88,9 @@ Does your 2d platformer really need ENTT?
 
 This ECS is a joy to use, and it makes things easier, not harder.
 
+### Want more?
+
+If your looking for more functionality, then you should pair this with our ***lock-free multithreading, realtime, event system [\[evs.h\]](https://github.com/173duprot/evs.h)*** which is powered by the same algorithems that run the frostbite engine.
 
 ## Installation
 
