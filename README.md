@@ -64,10 +64,10 @@ typedef enum {
     CMP_ID
 } cmp_id;
 
-static inline void system(ecs_t* ecs, ent_t ent, void* context) {
+static inline void system(ecs_t* ecs, ent_t ent, void* data) {
     int *component = (int*)get_cmp(ecs, ent, CMP_ID);
-    int *data      = (int*)context;
-    *component += *data;
+    int *value      = (int*)data;
+    *component += *value;
 }
 
 int main(void) {
