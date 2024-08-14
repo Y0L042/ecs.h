@@ -6,7 +6,7 @@
 
 No C++, no queries, no tags, no graphs, no relationships. Just deterministic static array access. Almost indistinguishable from direct array access, meaning there is essentially 0 overhead.
 
-This is for people who like developer-focused, high-performance, easy to use code, who doesn't mind editing the header file to meet their constraints.
+This is for people who like developer-focused, high-performance code, who do not mind getting their hands dirty and changing header-file settings.
 
 ---
 
