@@ -1,4 +1,4 @@
-<img align="left" style="width:240px" src="./misc/ecs.h.gif" width="260px">
+<img align="right" style="width:240px" src="./misc/ecs.h.gif" width="260px">
 
 **ecs.h** is a simple, fun, static, ECS library with no overhead.
 
