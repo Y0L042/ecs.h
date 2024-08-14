@@ -41,9 +41,9 @@ According to static analyses? yes[*](https://github.com/173duprot/ecs.h/blob/mai
 
 Buckle in.
 
-- Max 2048 entities
+- ~~Max 2048 entities~~ *Using `malloc_init()` you can use as many as you want.*
 - Max 32 components
-- Less memory efficient than dynamic.
+- Less memory efficient than dynamic. 
 
 ### Who is this for?
 
@@ -92,6 +92,12 @@ int main(void) {
     //free_ecs(ecs);
     return 0;
 }
+```
+
+The `malloc_init()` function is the answer to an issue where the operating system doesn't let you statically define huge chunks of memory.
+
+```
+
 ```
 
 ### Want more?
