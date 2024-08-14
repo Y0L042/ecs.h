@@ -1,4 +1,4 @@
-<img align="left" style="width:260px" src="./misc/ecs.h.gif" width="288px">
+<img align="left" style="width:240px" src="./misc/ecs.h.gif" width="260px">
 
 **ecs.h** is a simple, fun, static, ECS library with no overhead.
 
@@ -10,7 +10,6 @@ This is for people who like developer-focused, high-performance, easy to use cod
 
 ---
 
-<br>
 
 ## Features
 
