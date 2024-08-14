@@ -1,5 +1,4 @@
 <img align="left" style="width:260px" src="./misc/ecs.h.gif" width="288px">
-Sure, here’s the revised text with all typos corrected:
 
 ---
 
