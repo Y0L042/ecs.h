@@ -10,7 +10,7 @@ No C++, no queries, no tags, no graphs, no relationships. Just deterministic sta
 
 ---
 
-<br><br>
+<br>
 
 ## Features
 
