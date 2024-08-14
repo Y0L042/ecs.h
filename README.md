@@ -1,12 +1,12 @@
 <img align="left" style="width:260px" src="./misc/ecs.h.gif" width="288px">
 
----
-
 **ecs.h** is a simple, fun, static, ECS library with no overhead.
 
 *"Built for your old ThinkPad."*
 
 No C++, no queries, no tags, no graphs, no relationships. Just deterministic static array access. Almost indistinguishable from direct array access, meaning there is essentially 0 overhead.
+
+This is for people who like developer-focused, high-performance, easy to use code, who doesn't mind editing the header file to meet their constraints.
 
 ---
 
