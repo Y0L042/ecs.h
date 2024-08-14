@@ -3,6 +3,15 @@
 #include "raylib.h"
 #include "ecs.h"
 
+/**** Error Handling ****/
+/******************************************************************************/
+void log_error(const char* message) {
+    fprintf(stderr, "Error: %s\n", message);
+}
+
+/**** Game ****/
+/******************************************************************************/
+
 // Define component structures
 typedef struct {
     float x, y, z, scale;
@@ -34,10 +43,6 @@ typedef struct {
     float intensity;
     float range;
 } cmp_light_t;
-
-void log_error(const char* message) {
-    fprintf(stderr, "Error: %s\n", message);
-}
 
 // Quadtree/Octree node structure
 typedef struct OctreeNode {
@@ -182,7 +187,6 @@ void system_sound(ecs_t* ecs, ent_t ent, void* data) {
     }
 }
 
-
 void init_world(ecs_t* ecs, OctreeNode* octree) {
     // Create static entities like walls, floors, etc.
     ent_t wall = create_ent(ecs);
@@ -202,6 +206,8 @@ void init_world(ecs_t* ecs, OctreeNode* octree) {
     // Repeat for other static and dynamic objects
 }
 
+/**** Game Resource Management ****/
+/******************************************************************************/
 typedef struct {
     Model models[MAX_MODELS];
     Texture2D textures[MAX_TEXTURES];
@@ -225,6 +231,8 @@ void unload_resources() {
     }
 }
 
+/**** Game State Management ****/
+/******************************************************************************/
 typedef enum {
     GAME_STATE_MENU,
     GAME_STATE_PLAYING,
@@ -262,7 +270,6 @@ void load_level(const char* level_path, ecs_t* ecs) {
     // Example: load entities from level file
     // fclose(file);
 }
-
 
 int main() {
     InitWindow(800, 600, "Minimalistic FPS Shooter");
