@@ -20,7 +20,7 @@ If you can do it determinsiticly with few ops, do it, your cpu will thank you.
 
 At one point I was exploring weather I could try utilizing direct access to eliminate the idea of entities altogether, so I did a simple test itterating through the arrays directly. Too my suprize, giving up the fine-grained control of the ECS system, in the best case scenero only beat the ECS by *10ns*. You can find the original file [here](https://github.com/173duprot/ecs.h/blob/e1a355d85da10a84ec4a6f4e48b9a1ed71abe685/test.c).
 
-Anyways, here were my results:
+Anyways, here were my results, please note, this is with old code, so it's less optimal in a few places.
 
 ```
 Average time taken to create 1024 entities: 839.00 nanoseconds
