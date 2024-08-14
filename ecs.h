@@ -11,7 +11,7 @@
 // Settings are tuned for performance.
 #define MAX_ENTS 1024 /* MAX 2048 */
 #define MAX_CMPS 32    /* MAX 64 */
-#define MAX_CMP_SIZE 6 /* MAX 64 */
+#define MAX_CMP_SIZE 8 /* MAX 64 */
 
 typedef uint32_t ent_t;
 typedef uint16_t cmp_t;
