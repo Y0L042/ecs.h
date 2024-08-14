@@ -3,6 +3,10 @@
 #include "raylib.h"
 #include "ecs.h"
 
+/* I find header files obfuscate implimentation
+ * details in an unhelpful manner, below is the
+ * structure I use instead. */
+
 /**** Error Handling ****/
 /******************************************************************************/
 void log_error(const char* message) {
@@ -11,8 +15,8 @@ void log_error(const char* message) {
 
 /**** Game ****/
 /******************************************************************************/
-
-// Define component structures
+/**** Game Components *******/
+/************************************************/
 typedef struct {
     float x, y, z, scale;
 } cmp_transform_t;
@@ -44,7 +48,8 @@ typedef struct {
     float range;
 } cmp_light_t;
 
-// Quadtree/Octree node structure
+/**** 3D Space *******/
+/************************************************/
 typedef struct OctreeNode {
     BoundingBox bounds;
     struct OctreeNode* children[8];
@@ -52,7 +57,7 @@ typedef struct OctreeNode {
     ent_t entities[MAX_ENTS];
 } OctreeNode;
 
-// Quadtree/Octree for spatial partitioning
+// Interaction functions
 OctreeNode* CreateOctreeNode(BoundingBox bounds) {
     OctreeNode* node = (OctreeNode*)MemAlloc(sizeof(OctreeNode));
     node->bounds = bounds;
@@ -89,7 +94,8 @@ bool IsBoundingBoxInFrustum(BoundingBox box, Camera camera) {
     return CheckCollisionBoxFrustum(box, GetCameraFrustum(camera));
 }
 
-// Systems
+/**** Game Systems *******/
+/**************************************************/
 void system_move(ecs_t* ecs, ent_t ent, void* data) {
     cmp_transform_t* trans = (cmp_transform_t*)get_cmp(ecs, ent, 0);
     cmp_velocity_t* vel = (cmp_velocity_t*)get_cmp(ecs, ent, 1);
@@ -207,7 +213,7 @@ void init_world(ecs_t* ecs, OctreeNode* octree) {
 }
 
 /**** Game Resource Management ****/
-/******************************************************************************/
+/************************************************/
 typedef struct {
     Model models[MAX_MODELS];
     Texture2D textures[MAX_TEXTURES];
@@ -232,7 +238,7 @@ void unload_resources() {
 }
 
 /**** Game State Management ****/
-/******************************************************************************/
+/************************************************/
 typedef enum {
     GAME_STATE_MENU,
     GAME_STATE_PLAYING,
@@ -271,6 +277,8 @@ void load_level(const char* level_path, ecs_t* ecs) {
     // fclose(file);
 }
 
+/**** Usage ****/
+/******************************************************************************/
 int main() {
     InitWindow(800, 600, "Minimalistic FPS Shooter");
     SetTargetFPS(60);
