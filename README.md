@@ -66,17 +66,17 @@ Anyone who has avoided the ECS design pattern because of unnessasary complexity 
 
 typedef enum {
     CMP_ID
-} cmp_id;
+} cmp_id; // Track cmps with cmp ID's
 
 static inline void system(ecs_t* ecs, ent_t ent, void* data) {
     int *component = (int*)get_cmp(ecs, ent, CMP_ID);
     int *value      = (int*)data;
     *component += *value;
-}
+} // Systems are funcs
 
 int main(void) {
-    ecs_t ecs = {0};
-    ent_t ent = create_ent(&ecs);
+    ecs_t ecs = {0}; // Simple static initilize
+    ent_t ent = create_ent(&ecs); // Returns ent ID
 
     int cmp_data = 42;
     add_cmp(&ecs, ent, CMP_ID, &cmp_data, sizeof(cmp_data));
